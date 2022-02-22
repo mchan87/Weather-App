@@ -1,0 +1,108 @@
+.container {
+  max-width: 900px;
+  min-width: 700px;
+  margin: 20px auto;
+  padding: 60px;
+  background-image: url("images/Clouds background.jpg");
+  border-radius: 30px;
+}
+
+body {
+  font-family: "Heebo", sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+}
+h2 {
+  font-size: 25px;
+}
+
+h5 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  font-weight: bold;
+  font-size: 40px;
+}
+.currentcity {
+  font-weight: bold;
+  position: relative;
+  left: 10px;
+  font-size: 50px;
+}
+
+.currenttemp-emoji {
+  color: yellow;
+  font-size: 100px;
+  position: relative;
+  left: 35px;
+  padding-left: 15px;
+}
+
+.currentdegree {
+  text-align: justify;
+  position: relative;
+  left: 18px;
+  font-size: 70px;
+}
+.current-high,
+.current-low {
+  margin: 20px auto;
+}
+
+.currentLocation-button {
+  padding: 5px 30px;
+  width: 130px;
+  border-radius: 25px;
+}
+
+.choosecity-box {
+  display: block;
+  margin: 30px auto;
+  width: 100%;
+  text-align: left;
+  position: relative;
+  left: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.go-button {
+  display: block;
+  margin: 30px 20px;
+  background-color: rgb(226, 120, 6);
+  border-radius: 30px;
+  border-color: rgb(209, 82, 23);
+  border-width: 4px;
+  height: 50px;
+  width: 72px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.upcoming-dayscard {
+  position: relative;
+  left: 0px;
+  max-width: 1600px;
+  margin-top: 30px;
+}
+
+.cardbody-color {
+  background-color: #b5ead7;
+  border-width: 1px solid;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.heavyshowers,
+.sunny,
+.sunrain,
+.snowflake {
+  display: block;
+  text-align: center;
+}
