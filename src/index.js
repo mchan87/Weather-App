@@ -1,5 +1,3 @@
-import "./styles.css";
-
 let now = new Date();
 let seconds = now.getMilliseconds();
 let days = [
