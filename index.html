@@ -29,125 +29,131 @@
   </head>
   <body>
     <div class="container">
-      <span class="row">
-        <span class="col-4">
-          <h1>
-            Local time:
-            <ul>
-              <li id="day-week">Wednesday</li>
-              <li id="month-date">January 19, 2022</li>
-              <li id="hours-minutes">1:31</li>
-            </ul>
-          </h1>
-        </span>
-        <span class="col-5" class="current-temp-box">
-          <h2>Current Temperature in:</h2>
-          <h2 class="currentcity" id="current-city"></h2>
-          <h2 class="currentdegree">
-            <span id="degree-now"> 2</span>° <a href id="celsius">C</a> |
-            <a href id="fahrenheit">F</a> <br />
-            <i class="fas fa-sun currenttemp-emoji"></i>
-          </h2>
-        </span>
-        <span class="col-3">
-          <h2 class="current-high">
-            High: <span class="current-hightemp"> 4</span> °C
-          </h2>
-          <h2 class="current-low">
-            Low: <span class="current-lowtemp"> -2</span> °C
-          </h2>
-          <h2 class="current-low">
-            Weather Conditions: <span class="weather-conditions">Sunny</span>
-          </h2>
+      <div class="picture-background">
+        <span class="row">
+          <span class="col-4">
+            <h1>
+              Local time:
+              <ul>
+                <li id="day-week">Wednesday</li>
+                <li id="month-date">January 19, 2022</li>
+                <li id="hours-minutes">1:31</li>
+              </ul>
+            </h1>
+          </span>
+          <span class="col-5" class="current-temp-box">
+            <h2>Current Temperature in:</h2>
+            <h2 class="currentcity" id="current-city"></h2>
+            <h2 class="currentdegree">
+              <span id="degree-now"> 2</span>° <a href id="celsius">C</a> |
+              <a href id="fahrenheit">F</a> <br />
+              <i class="fas fa-sun currenttemp-emoji"></i>
+            </h2>
+          </span>
+          <span class="col-3">
+            <h2 class="current-high">
+              High: <span class="current-hightemp"> 4</span> °C
+            </h2>
+            <h2 class="current-low">
+              Low: <span class="current-lowtemp"> -2</span> °C
+            </h2>
+            <h2 class="current-low">
+              Weather Conditions: <span class="weather-conditions">Sunny</span>
+            </h2>
 
-          <button type="button" class="btn btn-success currentLocation-button">
-            Current Location
-          </button>
-        </span>
-      </span>
-
-      <form class="form-inline" id="search-form">
-        <div class="row">
-          <div class="col-9">
-            <div class="form-group mx-sm-3 mb-2">
-              <input
-                type="text"
-                class="form-control choosecity-box"
-                id="inputPassword2"
-                placeholder="Where should we go?"
-                value
-                ;
-              />
-            </div>
-          </div>
-          <div class="col-2">
-            <button type="submit" class="btn btn-primary mb-2 go-button">
-              GO!
+            <button
+              type="button"
+              class="btn btn-success currentLocation-button"
+            >
+              Current Location
             </button>
-          </div>
-        </div>
-      </form>
+          </span>
+        </span>
 
-      <h2><strong>Upcoming weather:</strong></h2>
-      <div class="upcoming-dayscard">
-        <div class="row">
-          <div class="col">
-            <div class="card cardbody-color">
-              <div class="card-body">
-                <h5 class="card-title days-week">Thursday</h5>
-                <i class="fas fa-cloud-showers-heavy heavyshowers"></i>
-                <p class="card-text">high 8° <br />low 2°</p>
+        <form class="form-inline" id="search-form">
+          <div class="row">
+            <div class="col-9">
+              <div class="form-group mx-sm-3 mb-2">
+                <input
+                  type="text"
+                  class="form-control choosecity-box"
+                  id="inputPassword2"
+                  placeholder="Where should we go?"
+                  value
+                  ;
+                />
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card cardbody-color">
-              <div class="card-body">
-                <h5 class="card-title days-week">Friday</h5>
-                <i class="fas fa-cloud-sun-rain sunrain"></i>
-                <p class="card-text">high 8° <br />low 2°</p>
-              </div>
+            <div class="col-2">
+              <button type="submit" class="btn btn-primary mb-2 go-button">
+                GO!
+              </button>
             </div>
           </div>
-          <div class="col">
-            <div class="card cardbody-color">
-              <div class="card-body">
-                <h5 class="card-title days-week">Saturday</h5>
-                <i class="far fa-snowflake snowflake"></i>
-                <p class="card-text">high 8° <br />low 2°</p>
+        </form>
+
+        <h2><strong>Upcoming weather:</strong></h2>
+        <div class="upcoming-dayscard">
+          <div class="row">
+            <div class="col">
+              <div class="card cardbody-color">
+                <div class="card-body">
+                  <h5 class="card-title days-week">Thursday</h5>
+                  <i class="fas fa-cloud-showers-heavy heavyshowers"></i>
+                  <p class="card-text">high 8° <br />low 2°</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card cardbody-color">
-              <div class="card-body">
-                <h5 class="card-title days-week">Sunday</h5>
-                <i class="fas fa-sun sunny"></i>
-                <p class="card-text">high 8° <br />low 2°</p>
+            <div class="col">
+              <div class="card cardbody-color">
+                <div class="card-body">
+                  <h5 class="card-title days-week">Friday</h5>
+                  <i class="fas fa-cloud-sun-rain sunrain"></i>
+                  <p class="card-text">high 8° <br />low 2°</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col">
-            <div class="card cardbody-color">
-              <div class="card-body">
-                <h5 class="card-title days-week">Monday</h5>
-                <i class="fas fa-sun sunny"></i>
-                <p class="card-text">high 8° <br />low 2°</p>
+            <div class="col">
+              <div class="card cardbody-color">
+                <div class="card-body">
+                  <h5 class="card-title days-week">Saturday</h5>
+                  <i class="far fa-snowflake snowflake"></i>
+                  <p class="card-text">high 8° <br />low 2°</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card cardbody-color">
+                <div class="card-body">
+                  <h5 class="card-title days-week">Sunday</h5>
+                  <i class="fas fa-sun sunny"></i>
+                  <p class="card-text">high 8° <br />low 2°</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card cardbody-color">
+                <div class="card-body">
+                  <h5 class="card-title days-week">Monday</h5>
+                  <i class="fas fa-sun sunny"></i>
+                  <p class="card-text">high 8° <br />low 2°</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div id="source-code">
+        <a
+          href="https://github.com/mchan87/Weather-App"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Open-source code</a
+        >
+        by Mary Chan
+      </div>
     </div>
-    <div id="source-code">
-      <a
-        href="https://github.com/mchan87/Weather-App"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Open-source code</a
-      >
-      by Mary Chan
-    </div>
+
     <script src="src/index.js"></script>
   </body>
 </html>

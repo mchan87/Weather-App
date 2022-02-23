@@ -1,10 +1,13 @@
 .container {
   max-width: 900px;
-  min-width: 700px;
-  margin: 20px auto;
-  padding: 60px;
+  min-width: 800px;
+}
+
+.picture-background {
   background-image: url("../images/Clouds background.jpg");
   border-radius: 30px;
+  margin: 20px auto;
+  padding: 60px;
 }
 
 body {
