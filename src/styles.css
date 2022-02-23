@@ -9,6 +9,7 @@
 
 body {
   font-family: "Heebo", sans-serif;
+  flex-direction: column;
 }
 
 h1 {
