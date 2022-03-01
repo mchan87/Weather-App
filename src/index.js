@@ -74,6 +74,11 @@ function showTemperature(response) {
   document.querySelector("#current-date").innerHTML = formatDate(
     response.data.dt * 1000
   );
+  let iconElement = document.querySelector("#current-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweatherapp.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
   celsiusTemp = response.data.main.temp;
 }
 

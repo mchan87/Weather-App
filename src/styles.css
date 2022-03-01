@@ -40,12 +40,12 @@ ul {
   font-size: 50px;
 }
 
-.currenttemp-emoji {
-  color: yellow;
-  font-size: 100px;
+.current-icon {
   position: relative;
   left: 35px;
   padding-left: 15px;
+  max-width: 20%;
+  max-height: 20%;
 }
 
 .currentdegree {
