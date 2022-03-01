@@ -1,3 +1,21 @@
+function getFtemp(event) {
+  event.preventDefault();
+  let ftemp = document.querySelector("#degree-now");
+  let temperature = `${Math.round(celsiusTemp * (9 / 5) + 32)}`;
+  ftemp.innerHTML = temperature;
+}
+let ftemp = document.querySelector("#fahrenheit");
+ftemp.addEventListener("click", getFtemp);
+
+function getCtemp(event) {
+  event.preventDefault();
+  let ctemp = document.querySelector("#degree-now");
+  ctemp.innerHTML = Math.round(celsiusTemp);
+}
+
+let ctemp = document.querySelector("#celsius");
+ctemp.addEventListener("click", getCtemp);
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let months = [
@@ -37,26 +55,8 @@ function formatDate(timestamp) {
   let year = now.getFullYear();
   let currentDate = document.querySelector("#current-date");
 
-  currentDate.innerHTML = `${day}, ${month} ${date} ${year} ${hours}:${minutes}`;
+  return `${day}, ${month} ${date} ${year} ${hours}:${minutes}`;
 }
-
-function getFtemp(event) {
-  event.preventDefault();
-  let ftemp = document.querySelector("#degree-now");
-  let temperature = `${Math.round(celsiusTemp * (9 / 5) + 32)}`;
-  ftemp.innerHTML = temperature;
-}
-let ftemp = document.querySelector("#fahrenheit");
-ftemp.addEventListener("click", getFtemp);
-
-function getCtemp(event) {
-  event.preventDefault();
-  let ctemp = document.querySelector("#degree-now");
-  ctemp.innerHTML = Math.round(celsiusTemp);
-}
-
-let ctemp = document.querySelector("#celsius");
-ctemp.addEventListener("click", getCtemp);
 
 function showTemperature(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
@@ -71,7 +71,7 @@ function showTemperature(response) {
   );
   document.querySelector(".weather-conditions").innerHTML =
     response.data.weather[0].description;
-  document.querySelector("date").innerHTML = formatDate(
+  document.querySelector("#current-date").innerHTML = formatDate(
     response.data.dt * 1000
   );
   celsiusTemp = response.data.main.temp;
