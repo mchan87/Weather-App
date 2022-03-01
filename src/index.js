@@ -1,50 +1,44 @@
-let now = new Date();
-let seconds = now.getMilliseconds();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-let year = now.getFullYear();
-let hours = now.getHours();
-if (hours < 10) {
-  hours = `0${hours}`;
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "Novembe",
+    "December",
+  ];
+  let month = months[now.getMonth()];
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
+  let year = now.getFullYear();
+  let currentDate = document.querySelector("#current-date");
+
+  currentDate.innerHTML = `${day}, ${month} ${date} ${year} ${hours}:${minutes}`;
 }
-let minutes = now.getMinutes();
-if (minutes < 10) {
-  minutes = `0${minutes}`;
-}
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "Novembe",
-  "December",
-];
-let month = months[now.getMonth()];
-let date = now.getDate();
-
-let getDay = document.querySelector("#day-week");
-getDay.innerHTML = days[now.getDay()];
-
-let getMonthDate = document.querySelector("#month-date");
-getMonthDate.innerHTML = `${month} ${date} ${year}`;
-
-let getHoursMinutes = document.querySelector("#hours-minutes");
-getHoursMinutes.innerHTML = `${hours}:${minutes}`;
 
 function getFtemp(event) {
   event.preventDefault();
@@ -77,6 +71,9 @@ function showTemperature(response) {
   );
   document.querySelector(".weather-conditions").innerHTML =
     response.data.weather[0].description;
+  document.querySelector("date").innerHTML = formatDate(
+    response.data.dt * 1000
+  );
   celsiusTemp = response.data.main.temp;
 }
 
