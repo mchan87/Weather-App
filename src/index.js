@@ -65,7 +65,6 @@ let ctemp = document.querySelector("#celsius");
 ctemp.addEventListener("click", getCtemp);
 
 function showTemperature(response) {
-  event.preventDefault();
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#degree-now").innerHTML = Math.round(
     response.data.main.temp
@@ -77,7 +76,7 @@ function showTemperature(response) {
     response.data.main.temp_min
   );
   document.querySelector(".weather-conditions").innerHTML =
-    response.data.weather[0].main;
+    response.data.weather[0].description;
   celsiusTemp = response.data.main.temp;
 }
 

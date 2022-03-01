@@ -89,6 +89,10 @@ ul {
   font-size: 20px;
 }
 
+.weather-conditions {
+  text-transform: capitalize;
+}
+
 .upcoming-dayscard {
   position: relative;
   left: 0px;
