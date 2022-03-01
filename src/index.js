@@ -32,13 +32,13 @@ function formatDate(timestamp) {
     "Novembe",
     "December",
   ];
-  let month = months[now.getMonth()];
-  let hours = now.getHours();
+  let month = months[date.getMonth()];
+  let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
 
-  let minutes = now.getMinutes();
+  let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
@@ -51,11 +51,10 @@ function formatDate(timestamp) {
     "Friday",
     "Saturday",
   ];
-  let day = days[now.getDay()];
-  let year = now.getFullYear();
-  let currentDate = document.querySelector("#current-date");
+  let day = days[date.getDay()];
+  let year = date.getFullYear();
 
-  return `${day}, ${month} ${date} ${year} ${hours}:${minutes}`;
+  return `${day} ${month} ${year} ${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
