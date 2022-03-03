@@ -5,7 +5,7 @@
 
 .picture-background {
   background-image: url("../images/Clouds background.jpg");
-  border-radius: 30px;
+  border-radius: 20px;
   margin: 20px auto;
   padding: 60px;
 }
@@ -54,9 +54,24 @@ ul {
   left: 18px;
   font-size: 70px;
 }
+
+#celsius,
+#fahrenheit {
+  text-decoration: none;
+}
+
+.currentdegree .active {
+  color: black;
+  cursor: default;
+}
+
 .current-high,
 .current-low {
   margin: 20px auto;
+}
+
+.current-high {
+  margin-top: 0px;
 }
 
 .currentLocation-button {
@@ -103,7 +118,7 @@ ul {
 .cardbody-color {
   background-color: #b5ead7;
   border-width: 1px solid;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
 }
 

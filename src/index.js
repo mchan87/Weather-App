@@ -1,8 +1,12 @@
+let celsiusTemp = null;
+
 function getFtemp(event) {
   event.preventDefault();
   let ftemp = document.querySelector("#degree-now");
   let temperature = `${Math.round(celsiusTemp * (9 / 5) + 32)}`;
   ftemp.innerHTML = temperature;
+  ctemp.classList.remove("active");
+  ftemp.classList.add("active");
 }
 let ftemp = document.querySelector("#fahrenheit");
 ftemp.addEventListener("click", getFtemp);
@@ -11,6 +15,8 @@ function getCtemp(event) {
   event.preventDefault();
   let ctemp = document.querySelector("#degree-now");
   ctemp.innerHTML = Math.round(celsiusTemp);
+  ctemp.classList.add("active");
+  ftemp.classList.remove("active");
 }
 
 let ctemp = document.querySelector("#celsius");
@@ -56,7 +62,7 @@ function formatDate(timestamp) {
 
   let daymonth = date.getDate();
 
-  return `${day} ${month} ${daymonth} ${year} ${hours}:${minutes}`;
+  return `${day} ${month} ${daymonth}, ${year} ${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
@@ -116,5 +122,4 @@ function getCurrentLocation(event) {
 let currentLocationButton = document.querySelector(".currentLocation-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let celsiusTemp = 0;
 searchCity("Vancouver");
