@@ -35,7 +35,7 @@ function formatDate(timestamp) {
     "August",
     "September",
     "October",
-    "Novembe",
+    "November",
     "December",
   ];
   let month = months[date.getMonth()];
@@ -124,3 +124,4 @@ let currentLocationButton = document.querySelector(".currentLocation-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Vancouver");
+formatDate(timestamp);
