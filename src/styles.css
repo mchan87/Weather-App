@@ -19,7 +19,7 @@ h1 {
   font-size: 25px;
 }
 h2 {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 h5 {
@@ -65,8 +65,14 @@ ul {
   cursor: default;
 }
 
+#weather-descriptionlist {
+  padding: 0px;
+}
+
 .current-high,
-.current-low {
+.current-low,
+.current-windspeed,
+.current-weatherconditions {
   margin: 20px auto;
 }
 
@@ -77,7 +83,8 @@ ul {
 .currentLocation-button {
   padding: 5px 30px;
   width: 130px;
-  border-radius: 25px;
+  border-radius: 20px;
+  margin-top: 25px;
 }
 
 .choosecity-box {
