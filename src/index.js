@@ -62,7 +62,7 @@ function formatDate(timestamp) {
 
   let daymonth = date.getDate();
 
-  return `${day} ${month} ${daymonth}, ${year} ${hours}:${minutes}`;
+  return `${day}, ${month} ${daymonth}, ${year} ${hours}:${minutes}`;
 }
 
 function showTemperature(response) {
