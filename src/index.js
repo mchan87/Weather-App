@@ -2,9 +2,9 @@ let celsiusTemp = null;
 
 function getFtemp(event) {
   event.preventDefault();
-  let ftemp = document.querySelector("#degree-now");
+  let ftempValue = document.querySelector("#degree-now");
   let temperature = `${Math.round(celsiusTemp * (9 / 5) + 32)}`;
-  ftemp.innerHTML = temperature;
+  ftempValue.innerHTML = temperature;
   ctemp.classList.remove("active");
   ftemp.classList.add("active");
 }
@@ -13,8 +13,8 @@ ftemp.addEventListener("click", getFtemp);
 
 function getCtemp(event) {
   event.preventDefault();
-  let ctemp = document.querySelector("#degree-now");
-  ctemp.innerHTML = Math.round(celsiusTemp);
+  let ctempValue = document.querySelector("#degree-now");
+  ctempValue.innerHTML = Math.round(celsiusTemp);
   ctemp.classList.add("active");
   ftemp.classList.remove("active");
 }
