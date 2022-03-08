@@ -65,6 +65,10 @@ function formatDate(timestamp) {
   return `${day}, ${month} ${daymonth}, ${year} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = "Forecast";
+}
 function showTemperature(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#degree-now").innerHTML = Math.round(
@@ -127,3 +131,4 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Vancouver");
 formatDate(timestamp);
+displayForecast();
