@@ -130,5 +130,5 @@ let currentLocationButton = document.querySelector(".currentLocation-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Vancouver");
-formatDate(timestamp);
+formatDate(new Date());
 displayForecast();
