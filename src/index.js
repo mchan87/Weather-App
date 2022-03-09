@@ -67,7 +67,26 @@ function formatDate(timestamp) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  forecastElement.innerHTML = "Forecast";
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thur", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+            <div class="col">
+              <div class="card cardbody-color">
+                <div class="card-body">
+                  <h5 class="card-title days-week">${day}</h5>
+                  <i class="fas fa-cloud-showers-heavy heavyshowers"></i>
+                  <p class="card-text">high <span class="temp-max">8°</span>  <br />low <span class="temp-low">2°</span></p>
+                </div>
+              </div>
+            </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 function showTemperature(response) {
   document.querySelector("#current-city").innerHTML = response.data.name;
