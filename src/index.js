@@ -77,13 +77,11 @@ function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         `
-            <div class="col-2">
-              <div class="card cardbody-color">
-                <div class="card-body">
+            <div class="col">
                   <h5 class="card-title days-week">${formatDay(
                     forecastDay.dt
                   )}</h5>
@@ -97,8 +95,6 @@ function displayForecast(response) {
                     forecastDay.temp.min
                   )}
       </span></p>
-                </div>
-              </div>
             </div>
   `;
     }
